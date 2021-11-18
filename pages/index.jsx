@@ -68,34 +68,42 @@ export default function Home() {
         </Text>
 
         <Stack spacing={5} direction={["column", "row"]} my="5">
-          <Button
-            leftIcon={<FaGithub />}
-            colorScheme={shuffledColorList[0]}
-            variant="outline"
-          >
-            <Link href="https://github.com/JGynther">Github</Link>
-          </Button>
-          <Button
-            leftIcon={<FaLinkedinIn />}
-            colorScheme={shuffledColorList[1]}
-            variant="outline"
-          >
-            <Link href="https:/linkedin.com/in/joona-gynther">LinkedIn</Link>
-          </Button>
-          <Button
-            leftIcon={<FaTwitter />}
-            colorScheme={shuffledColorList[2]}
-            variant="outline"
-          >
-            <Link href="https://twitter.com/GyntherJoona">Twitter</Link>
-          </Button>
-          <Button
-            leftIcon={<FaInstagram />}
-            colorScheme={shuffledColorList[3]}
-            variant="outline"
-          >
-            <Link href="https://instagram.com/gyntherjoona">Instagram</Link>
-          </Button>
+          <Link href="https://github.com/JGynther" passHref>
+            <Button
+              leftIcon={<FaGithub />}
+              colorScheme={shuffledColorList[0]}
+              variant="outline"
+            >
+              Github
+            </Button>
+          </Link>
+          <Link href="https://linkedin.com/in/joona-gynther" passHref>
+            <Button
+              leftIcon={<FaLinkedinIn />}
+              colorScheme={shuffledColorList[1]}
+              variant="outline"
+            >
+              LinkedIn
+            </Button>
+          </Link>
+          <Link href="https://twitter.com/GyntherJoona" passHref>
+            <Button
+              leftIcon={<FaTwitter />}
+              colorScheme={shuffledColorList[2]}
+              variant="outline"
+            >
+              Twitter
+            </Button>
+          </Link>
+          <Link href="https://instagram.com/gyntherjoona" passHref>
+            <Button
+              leftIcon={<FaInstagram />}
+              colorScheme={shuffledColorList[3]}
+              variant="outline"
+            >
+              Instagram
+            </Button>
+          </Link>
         </Stack>
 
         <Stack spacing={5} direction={["column", "row"]} my="4">
