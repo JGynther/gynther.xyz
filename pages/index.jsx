@@ -121,7 +121,7 @@ export default function Home() {
             href="mailto:joona@gynther.xyz"
             copy="joona@gynther.xyz"
           >
-            Sähköposti
+            Email
           </ButtonWithCopy>
           <ButtonWithCopy
             colorScheme={shuffledColorList[6]}
@@ -129,7 +129,7 @@ export default function Home() {
             href="tel:+358503236750"
             copy="+358503236750"
           >
-            Puhelin
+            Phone
           </ButtonWithCopy>
         </Stack>
 
