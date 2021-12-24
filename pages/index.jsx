@@ -7,7 +7,6 @@ import {
   ButtonGroup,
   Flex,
   Stack,
-  Link as ChakraLink,
 } from "@chakra-ui/react";
 //import { ExternalLinkIcon } from "@chakra-ui/icons";
 import { useClipboard, useToast } from "@chakra-ui/react";
