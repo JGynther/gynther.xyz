@@ -8,8 +8,9 @@ import {
   Flex,
   Stack,
 } from "@chakra-ui/react";
-//import { ExternalLinkIcon } from "@chakra-ui/icons";
+
 import { useClipboard, useToast } from "@chakra-ui/react";
+
 import {
   FaInstagram,
   FaLinkedinIn,
@@ -22,6 +23,8 @@ import {
   FaCheck,
   FaExternalLinkAlt,
 } from "react-icons/fa";
+
+import { useState, useEffect } from "react";
 
 export default function Home() {
   const colorList = [
@@ -44,18 +47,17 @@ export default function Home() {
       </Head>
 
       <main>
+        <Banner />
         <Text
-          as="h1"
-          color="white"
-          fontSize={{ base: "4xl", md: "6xl" }}
-          my="2"
-          letterSpacing="0.08em"
+          my="4"
+          fontSize={{ base: "sm", md: "md" }}
           fontWeight="bold"
+          letterSpacing="0.08em"
         >
           Joona Gynther
         </Text>
         <Text my="1" fontSize={{ base: "sm", md: "md" }}>
-          Mathematics and statistical data analytics @ Tampere University
+          Statistical data analytics @ Tampere University
         </Text>
         <Text my="1" fontSize={{ base: "sm", md: "md" }}>
           Co-Founder, Chairperson and COO @{" "}
@@ -174,5 +176,29 @@ function ButtonWithCopy({ children, icon, href, copy, colorScheme, ...rest }) {
         onClick={handleClick}
       />
     </ButtonGroup>
+  );
+}
+
+function Banner() {
+  const [banner, setBanner] = useState("");
+
+  const getBanner = async () => {
+    const text = await fetch("/banner.txt").then((r) => r.text());
+    setBanner(text);
+  };
+
+  useEffect(() => {
+    getBanner();
+  }, []);
+
+  return (
+    <Text
+      fontSize={{ base: "5px", md: "8px" }}
+      whiteSpace="pre"
+      fontFamily="monospace"
+      my="20px"
+    >
+      {banner}
+    </Text>
   );
 }
