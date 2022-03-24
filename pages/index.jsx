@@ -68,12 +68,7 @@ export default function Home() {
           Statistical data analytics @ Tampere University
         </Text>
         <Text my="1" fontSize={{ base: "sm", md: "md" }}>
-          Co-Founder, Chairperson and COO @{" "}
-          <Link href="https://evon.fi" passHref>
-            <a style={{ textDecoration: "underline" }} target="_blank">
-              Evon Group
-            </a>
-          </Link>
+          Trainee (developer) @ CGI
         </Text>
 
         <Stack spacing={5} direction={["column", "row"]} my="5">
@@ -132,35 +127,26 @@ export default function Home() {
           >
             Email
           </ButtonWithCopy>
-          <ButtonWithCopy
-            colorScheme={shuffledColorList[6]}
-            icon={<FaPhoneAlt />}
-            href="tel:+358503236750"
-            copy="+358503236750"
-          >
-            Phone
-          </ButtonWithCopy>
         </Stack>
 
         <Stack mt={10} spacing={5}>
-          <LinkButton href="/Resume_Gynther.pdf">RESUME / CV</LinkButton>
           <Flex alignItems="center">
             <LinkButton href="/public-key-joona@gynther.xyz.txt">
               PGP PUBLIC KEY
             </LinkButton>
             <Tooltip
               label="Emails from joona@gynther.xyz are signed with PGP, and can be verified with this key."
-              fontSize="md"
+              fontSize="sm"
             >
               <Box
                 mx={4}
                 bg="gray.700"
-                w={6}
-                h={6}
+                w={5}
+                h={5}
                 borderRadius="100"
                 textAlign="center"
               >
-                <Text opacity={0.8} pointerEvents="none">
+                <Text opacity={0.8} pointerEvents="none" fontSize="xs">
                   ?
                 </Text>
               </Box>
@@ -234,6 +220,7 @@ function LinkButton({ href, children, ...rest }) {
             variant="link"
             letterSpacing="0.1em"
             {...rest}
+            fontSize="xs"
           >
             {children}
           </Button>
